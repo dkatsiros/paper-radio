@@ -1,0 +1,16 @@
+# --- Feed server (required to host the feed) ---
+fastapi>=0.110
+uvicorn[standard]>=0.27
+
+# --- Generation pipeline (required to make episodes) ---
+# Drives Google NotebookLM headlessly against your own account. MIT-licensed,
+# unofficial. Also needs the ffmpeg binary on PATH (apt/brew install ffmpeg).
+notebooklm-py>=0.8.2
+
+# --- Optional niceties ---
+python-dotenv>=1.0     # load a .env file automatically (config falls back to os.environ)
+mutagen>=1.47          # accurate mp3 duration (a pure-python parser is used if absent)
+
+# --- Tests ---
+pytest>=8.0
+httpx>=0.27            # required by fastapi.testclient

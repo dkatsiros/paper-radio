@@ -1,0 +1,26 @@
+# Secrets & config
+.env
+*.env
+!.env.example
+
+# Feed store (generated content, audio, and — critically — the private token)
+data/
+output/
+*.mp3
+*.m4a
+token.txt
+episodes.json
+feed.xml
+
+# NotebookLM auth
+storage_state.json
+.notebooklm/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+context.md
